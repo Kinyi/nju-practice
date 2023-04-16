@@ -1,9 +1,11 @@
-CFLAGS=-O2 -fno-pic -ggdb
+#CFLAGS:=-O2 -fno-pic -ggdb
+CFLAGS:=-O2
 
-LINK=-static
+#LDFLAGS:=-static
+LDFLAGS:=
 
 a.out:a.o b.o main.o
-	gcc $(LINK) a.o b.o main.o
+	gcc $(LDFLAGS) a.o b.o main.o
 
 a.o:a.c
 	gcc $(CFLAGS) -c a.c
